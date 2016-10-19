@@ -21,7 +21,8 @@
     font-family: 'Noto Sans JP';
     font-style: normal;
     font-weight: 400;
-    src: url(./../fonts/NotoSansJP-Regular.woff2) format('woff2'),
+    src: local('NotoSansJP-Regular.otf'),
+    url(./../fonts/NotoSansJP-Regular.woff2) format('woff2'),
     url(./../fonts/NotoSansJP-Regular.woff) format('woff'),
     url(./../fonts/NotoSansJP-Regular.otf) format('opentype');
 }
