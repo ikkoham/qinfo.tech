@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import url(sanitize.min.css);
-@import url(notosansjp.css);
 
 
 *, *::before, *::after {
@@ -9,12 +8,16 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 1.2rem;
     max-width: 800px;
     min-height: 100vh;
     margin: 0 auto;
     background-color: #F7CAC9;/* Rose Quartz */
+}
+
+body:lang(ja) {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 a:link, a:visited, a:hover, a:active {
