@@ -4,7 +4,7 @@ import { OnInit } from '@angular/core'
 import { PresentationService } from './presentation.service'
 
 @Component({
-  selector: 'presentation',
+  selector: '[presentation]',
   templateUrl: 'presentation.component.html',
   providers: [ PresentationService ]
 })

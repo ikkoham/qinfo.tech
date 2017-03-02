@@ -1,57 +1,55 @@
-<section id="presentation">
-  <h2>
-    <a href="#presentation">
-      <i class="fa fa-bar-chart"></i>Presentation
-    </a>
-  </h2>
-  <ul class="fa-ul">
-    <li><i class="fa-li fa fa-university"></i>Domestic(Oral)
-      <ol reversed="reversed">
-        <li *ngFor="let p of domesticOral">
-          {{p?.speaker}}<br>
-          "{{p.title}}" {{p?.id}}<br>
-          <a href="{{p?.workshopUrl}}" target="_blank">
-            {{p?.workshopName}}
-          </a><br>
-          @{{p.place}}<br>
-          {{p?.date.from | date: 'mediumDate'}}
-          <ng-container *ngIf="p.date.from!=p.date.to">
-            - {{p?.date.to | date: 'mediumDate'}}
-          </ng-container>
-        </li>
-      </ol>
-    </li>
-    <li><i class="fa-li fa fa-university"></i>Domestic(Poster)
-      <ol reversed="reversed">
-        <li *ngFor="let p of domesticPoster">
-          {{p?.speaker}}<br>
-          "{{p.title}}" {{p?.id}}<br>
-          <a href="{{p?.workshopUrl}}" target="_blank">
-            {{p?.workshopName}}
-          </a><br>
-          @{{p.place}}<br>
-          {{p?.date.from | date: 'mediumDate'}}
-          <ng-container *ngIf="p.date.from!=p.date.to">
-            - {{p?.date.to | date: 'mediumDate'}}
-          </ng-container>
-        </li>
-      </ol>
-    </li>
-    <li><i class="fa-li fa fa-university"></i>Summer School
-      <ol reversed="reversed">
-        <li *ngFor="let p of summerSchool">
-          {{p?.speaker}}<br>
-          "{{p.title}}" {{p?.id}}<br>
-          <a href="{{p?.workshopUrl}}" target="_blank">
-            {{p?.workshopName}}
-          </a><br>
-          @{{p.place}}<br>
-          {{p?.date.from | date: 'mediumDate'}}
-          <ng-container *ngIf="p.date.from!=p.date.to">
-            - {{p?.date.to | date: 'mediumDate'}}
-          </ng-container>
-        </li>
-      </ol>
-    </li>
-  </ul>
-</section>
+<h2>
+  <a href="#presentation">
+    <i class="fa fa-bar-chart"></i>Presentation
+  </a>
+</h2>
+<ul class="fa-ul">
+  <li><i class="fa-li fa fa-university"></i>Domestic(Oral)
+    <ol reversed="reversed">
+      <li *ngFor="let p of domesticOral">
+        {{p?.speaker}}<br>
+        "{{p.title}}" {{p?.id}}<br>
+        <a href="{{p?.workshopUrl}}" target="_blank">
+          {{p?.workshopName}}
+        </a><br>
+        @{{p.place}}<br>
+        {{p?.date.from | date: 'mediumDate'}}
+        <ng-container *ngIf="p.date.from!=p.date.to">
+          - {{p?.date.to | date: 'mediumDate'}}
+        </ng-container>
+      </li>
+    </ol>
+  </li>
+  <li><i class="fa-li fa fa-university"></i>Domestic(Poster)
+    <ol reversed="reversed">
+      <li *ngFor="let p of domesticPoster">
+        {{p?.speaker}}<br>
+        "{{p.title}}" {{p?.id}}<br>
+        <a href="{{p?.workshopUrl}}" target="_blank">
+          {{p?.workshopName}}
+        </a><br>
+        @{{p.place}}<br>
+        {{p?.date.from | date: 'mediumDate'}}
+        <ng-container *ngIf="p.date.from!=p.date.to">
+          - {{p?.date.to | date: 'mediumDate'}}
+        </ng-container>
+      </li>
+    </ol>
+  </li>
+  <li><i class="fa-li fa fa-university"></i>Summer School
+    <ol reversed="reversed">
+      <li *ngFor="let p of summerSchool">
+        {{p?.speaker}}<br>
+        "{{p.title}}" {{p?.id}}<br>
+        <a href="{{p?.workshopUrl}}" target="_blank">
+          {{p?.workshopName}}
+        </a><br>
+        @{{p.place}}<br>
+        {{p?.date.from | date: 'mediumDate'}}
+        <ng-container *ngIf="p.date.from!=p.date.to">
+          - {{p?.date.to | date: 'mediumDate'}}
+        </ng-container>
+      </li>
+    </ol>
+  </li>
+</ul>
