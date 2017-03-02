@@ -155,5 +155,20 @@
         "officialLang": "ja",
         "lang": "ja",
         "style": "poster"
+    },
+    {
+        "title": "Relation between state-distinction power and disturbance in quantum measurements",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Workshop on Quantum Incompatibility",
+        "workshopUrl": "http://miyaderatakayuki.wixsite.com/home/single-post/2017/01/12/Workshop-on-Quantum-Incompatibility",
+        "place": "Kyoto University",
+        "date":
+        {
+            "from": "2017-1-18",
+            "to": "2017-1-18"
+        },
+        "officialLang": "en",
+        "lang": "en",
+        "style": "oral"
     }
 ]

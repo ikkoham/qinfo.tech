@@ -10,6 +10,7 @@ import { PresentationService } from './presentation.service'
 })
 
 export class PresentationComponent implements OnInit {
+  internationalOral: string[];
   domesticOral: string[];
   domesticPoster: string[];
   summerSchool: string[];
@@ -20,7 +21,7 @@ export class PresentationComponent implements OnInit {
     this.presentationService.getPresentations()
       .subscribe(res => {
         this.domesticOral = res
-          .filter(p => p['style'] == 'oral')
+          .filter(p => p['style'] == 'oral' && p['officialLang'] == 'ja')
           .sort(this.sortedByDateDesc);
         this.domesticPoster = res
           .filter(p => p['style'] == 'poster')
@@ -28,6 +29,9 @@ export class PresentationComponent implements OnInit {
         this.summerSchool = res
           .filter(p => p['style'] == 'summerSchool')
           .sort(this.sortedByDateDesc);
+        this.internationalOral = res
+          .filter(p => p['style'] == 'oral' && p['officialLang'] == 'en')
+          .sort(this.sortedByDateDesc)
       })
   }
 
