@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PresentationDetailComponent {
   @Input()
-  p: string[];
+  p: any;
 }
