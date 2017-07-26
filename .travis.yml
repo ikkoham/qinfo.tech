@@ -16,7 +16,7 @@ before_install:
 script:
   -
 before_deploy:
-  - ng build --prod —base-href "https://qinfo.tech/"
+  - ng build --aot —base-href "https://qinfo.tech/"
 deploy:
   provider: s3
   access_key_id:
@@ -27,11 +27,9 @@ deploy:
   skip_cleanup: true
   local_dir: dist
   region: ap-northeast-1
-  acl: public_read
   on:
     branch:
       - source
-      - deploy-test
 notifications:
   on_success: change
   on_failure: always
