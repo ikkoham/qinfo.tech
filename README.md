@@ -4,6 +4,6 @@ This is a source code of [Ikko Hamamura's website](https://qinfo.tech).
 
 ## Architecture
 
-- Angular
+- React
 - HTML5, CSS3
 - AWS S3

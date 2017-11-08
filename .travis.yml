@@ -16,7 +16,7 @@ before_install:
 script:
   -
 before_deploy:
-  - ng build --aot —base-href "https://qinfo.tech/"
+  - npm run build 
 deploy:
   provider: s3
   access_key_id:
