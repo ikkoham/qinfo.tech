@@ -170,5 +170,55 @@
         "officialLang": "en",
         "lang": "en",
         "style": "oral"
+    },
+    {
+        "title": "The structure of composite systems in quantum theory",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "The 36th Quantum Information Technology Symposium (QIT36)",
+        "workshopUrl": "https://staff.aist.go.jp/s-kawabata/qit/qit36/index_e.html",
+        "place": "Ritesumeikan University, Suzaku Campus",
+        "date":
+        {
+            "from": "2017-5-29",
+            "to": "2017-5-30"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "Entanglement of Effects",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura",
+        "id": "24pA19-5",
+        "workshopName": "JPS The 2017 Autumn Meeting",
+        "workshopUrl": "http://w4.gakkai-web.net/jps_search/2017aue/data/html/program.html",
+        "place": "Iwate univ.",
+        "date":
+        {
+            "from": "2017-9-21",
+            "to": "2017-9-24"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "The structure of composite systems in quantum theory",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura",
+        "workshopName": "Okinawa School in Physics: Coherent Quantum Dynamics (CQD 2017)",
+        "workshopUrl": "https://groups.oist.jp/ja/cqd/cqd-2017",
+        "place": "OIST Seaside House",
+        "date":
+        {
+            "from": "2017-9-26",
+            "to": "2017-10-5"
+        }
+        ,
+        "officialLang": "en",
+        "lang": "en",
+        "style": "summerSchool"
     }
 ]
