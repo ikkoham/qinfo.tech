@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Presentation from './Presentation';
+import Publication from './Publication';
 
 class App extends React.Component {
   render() {
@@ -16,21 +18,10 @@ class App extends React.Component {
               <li><i className="fa-li fa fa-star"></i>Quantum measurement theory</li>
             </ul>
           </section>
-          <section id="publication">
+          <Publication />
+          <Presentation />
+          <section id="cv">
             <h2>
-              <a href="#publication"><i className="fa fa-book"></i>Publication</a>
-            </h2>
-            <ol reversed="reversed">
-              <li>
-                Relation between state-distinction power and disturbance in quantum measurements<br />
-         I. Hamamura, T. Miyadera<br />
-        arXiv: 1610.08814
-      </li>
-        </ol>
-        </section>
-        <Presentation />
-        <section id="cv">
-        <h2>
         <a href="#cv">
         <i className="fa fa-graduation-cap"></i>CV
       </a>
