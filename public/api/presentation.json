@@ -187,6 +187,21 @@
         "style": "oral"
     },
     {
+        "title": "Review of IBM's Cloud Quantum Computer",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Quantum Information Kansai Student Chapter 22th",
+        "workshopUrl": "https://sites.google.com/site/qikansai/past/22meeting",
+        "place": "Kyoto Univ.",
+        "date":
+        {
+            "from": "2017-6-6",
+            "to": "2017-6-6"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
         "title": "Entanglement of Effects",
         "speaker": "Ikko Hamamura",
         "authors": "Ikko Hamamura",
