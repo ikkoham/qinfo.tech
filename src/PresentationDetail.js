@@ -4,7 +4,10 @@ class PresentationDetail extends Component {
   render() {
     const presentations = this.props.presentations;
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    var format = (d) => new Intl.DateTimeFormat('en-US', options).format(Date.parse(d));
+    let format = d => {
+      let dp = d.split(/[^0-9]/);
+      return new Intl.DateTimeFormat('en-US', options).format(new Date(dp[0], dp[1] - 1, dp[2]));
+    };
     return presentations.map( (p, k) => (
         <li key={k}>
         {p.speaker}<br />
