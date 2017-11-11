@@ -10,16 +10,16 @@ class Presentation extends Component {
       .then(res => this.setState({
         presentation : {
           domesticOral : res
-            .filter(p => p['style'] === 'oral' && p['officialLang'] === 'ja')
+            .filter(p => p.style === 'oral' && p.officialLang === 'ja')
             .sort(this.sortedByDateDesc),
           domesticPoster : res
-            .filter(p => p['style'] === 'poster')
+            .filter(p => p.style === 'poster')
             .sort(this.sortedByDateDesc),
           summerSchool : res
-            .filter(p => p['style'] === 'summerSchool')
+            .filter(p => p.style === 'summerSchool')
             .sort(this.sortedByDateDesc),
           internationalOral : res
-            .filter(p => p['style'] === 'oral' && p['officialLang'] === 'en')
+            .filter(p => p.style === 'oral' && p.officialLang === 'en')
             .sort(this.sortedByDateDesc)
         }
       })
@@ -27,8 +27,10 @@ class Presentation extends Component {
   }
 
   sortedByDateDesc(a, b) {
-    let parsedDateA = Date.parse(a['date']['from']);
-    let parsedDateB = Date.parse(b['date']['from']);
+    let split_a = a.date.from.split(/[^0-9]/);
+    let split_b = b.date.from.split(/[^0-9]/);
+    let parsedDateA = new Date(split_a[0], split_a[1] - 1, split_b[2]);
+    let parsedDateB = new Date(split_b[0], split_b[1] - 1, split_b[2]);
     if (parsedDateA < parsedDateB) {
       return 1;
     }
