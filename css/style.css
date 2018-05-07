@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+@import url(./sanitize.min.css);
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #F7CAC9;/* Rose Quartz */
+    padding: 0 10px;
+}
+
+body:lang(ja) {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* Header */
+
+body::before {
+    content: "";
+    height: 10px;
+    display: block;
+}
+
+header {
+    background: #f0eee9;/* Colud Dancer */
+    font-size:14pt;
+    width:95%;
+    border: 2px dashed #5b5149;/* Major Brown */
+    border-radius:5px;
+    box-shadow: 0 0 5px 5px #f0eee9;/* Colud Dancer */
+    text-shadow: 0 0 5px;
+    padding:10px;
+    margin:0 auto 10px;
+}
+
+
+#header_link {
+    text-shadow: 0 0 5px;
+    color: #5b5149;/* Major Brown */
+}
+
+h1 {
+    font-size:24pt;
+}
+
+/* Flexible Box */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+section h2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #92A8D1;/* Serenity */
+    text-align: center;
+    display: table;
+    transition: 1s;
+    margin: 10px auto;
+}
+
+section h2:hover {
+    border-radius: 10%;
+}
+
+section h2 a {
+    color: #f0eee9;/* Colud Dancer *//*#92A8D1;/* Serenity */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* CSS animation*/
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+section > :not(h2) {
+    display: none;
+    animation: show 2s ease 0s;
+}
+
+section:target > :not(h2){
+    display: block;
+}
+
+section:target {
+    order: -1;
+    width: 100%;
+}
+
+section:target > h2 a {
+    pointer-events: none;
+    cursor: default;
+    font-size: 20pt;
+}
+
+section:target > h2 {
+    height: auto;
+    width: 100%;
+    text-align: initial;
+    background-color: #92A8D1;/* Serenity */
+    color: #f0eee9;
+    border-radius: 0;
+    margin: 10px auto;
+}
+
+section:target h2 i {
+    padding: 5px;
+    margin: 5px;
+}
+
+section :not(h2) a,
+section :not(h2) a:link,
+section :not(h2) a:visited,
+section :not(h2) a:hover,
+section :not(h2) a:active {
+    color: black;
+    text-decoration: underline;
+}
+
+/* table */
+table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+    font-size: 18px;
+}
+
+table th,
+table td {
+    padding: 10px;
+}
+
+table th {
+    background-color: rgba(146, 168, 209, 0.9);/* Serenity */
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: left;
+    min-width: 100px;
+    overflow: visible;
+    position: relative;
+    color: #f0eee9;
+    font-weight: normal;
+}
+
+/* ol */
+ol {
+    margin: 1em 0;
+    padding-left: 40px;
+    list-style-type: decimal;
+}
+
+/* footer */
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: rgb(146, 168, 209);/* Serenity */
+}
+
+section img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  transition: 1s;
+}
+
+section img:hover {
+  border-radius: 10%;
+}

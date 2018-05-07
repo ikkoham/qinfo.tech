@@ -1,0 +1,239 @@
+[
+    {
+        "title": "Quantum error correction and the AdS/CFT correspondence(review)",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Summer School by Young Nuclear and Particle Physicist Group of Japan",
+        "workshopUrl": "http://www.tuhep.phys.tohoku.ac.jp/~natsugaku2015/",
+        "place": "Hotel Tatsuki",
+        "date":
+        {
+            "from": "2015-8-17",
+            "to": "2015-8-22"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "summerSchool"
+    },
+    {
+        "title": "Relation between state-distinction power and disturbance in quantum measurements",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura, Takayuki Miyadera",
+        "id": "16aAC-07",
+        "workshopName": "JPS The 2015 Autumn Meeting",
+        "workshopUrl": "http://www2.kansai-u.ac.jp/jps2015/",
+        "place": "Kansai univ.",
+        "date":
+        {
+            "from": "2015-9-16",
+            "to":"2015-9-19"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "Relation between state-distinction power and disturbance in quantum measurements",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura, Takayuki Miyadera",
+        "workshopName": "ImPACT Mirai Kaitaku Kenkyukai 2015",
+        "workshopUrl": "http://www.jst.go.jp/impact/yamamoto/workshop/shikotsu.html",
+        "place": "Kyukamura Shikotsuko",
+        "date":
+        {
+            "from": "2015-10-13",
+            "to": "2015-10-18"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "Quantum non-demolition measurements from a perspective of quantum measuremant theory",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Quantum Information Kansai Student Chapter 19th",
+        "workshopUrl": "http://yagura.scphys.kyoto-u.ac.jp/wakate/index.php?%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B#o3ac5705",
+        "place": "Osaka University",
+        "date":
+        {
+            "from": "2015-11-28",
+            "to": "2015-11-28"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "Quantum Incompatibility and Information-Disturbance Tradeoff",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "QMKEK",
+        "workshopUrl": "http://www-conf.kek.jp/QMKEK/",
+        "place": "Kobayashi Hall in High Energy Accelerator Research Organization",
+        "date":
+        {
+            "from": "2016-2-17",
+            "to": "2016-2-18"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "Incompatibility in Quantum Theory",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "61th Condensed Matter Physics Summer School 2016",
+        "workshopUrl": "http://cmpss.jp/index.html",
+        "place": "Hotel Charade Inn Shiga",
+        "date":
+        {
+            "from": "2016-7-29",
+            "to": "2016-8-2"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "summerSchool"
+    },
+    {
+        "title": "Relation between state-distinction power and disturbance",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "61th Condensed Matter Physics Summer School 2016",
+        "workshopUrl": "http://cmpss.jp/index.html",
+        "place": "Hotel Charade Inn Shiga",
+        "date":
+        {
+            "from": "2016-7-29",
+            "to": "2016-8-2"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "summerSchool"
+    },
+    {
+        "title": "Incompatibility in general probability theories",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura, Takayuki Miyadera",
+        "id": "16pKH-4",
+        "workshopName": "JPS The 2016 Autumn Meeting",
+        "workshopUrl": "http://h-jps.w3.kanazawa-u.ac.jp/jps2016f/jps2016f/homu.html",
+        "place": "Kanazawa univ.",
+        "date":
+        {
+            "from": "2016-9-13",
+            "to": "2016-9-16"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "Incompatibility of operation and relation between information and disturbance",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Mathematics in Quantum System Estimation",
+        "workshopUrl": "http://bayes.sigmath.es.osaka-u.ac.jp/ftanaka/workshop/RIMS2016.html",
+        "place": "Research Institute for Mathematical Sciences, Kyoto University",
+        "date":
+        {
+            "from": "2016-10-26",
+            "to": "2016-10-28"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "On incompatible operation in quantum theory",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "QUAntum Theory & Technology Un-Official Meeting",
+        "workshopUrl": "http://www.sceng.kochi-tech.ac.jp/koban/quatuo/doku.php?id=%E7%AC%AC6%E5%9B%9Equatuo%E7%A0%94%E7%A9%B6%E4%BC%9A",
+        "place": "Kochi University of Technology",
+        "date":
+        {
+            "from": "2017-1-8",
+            "to": "2017-1-9"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "Relation between state-distinction power and disturbance in quantum measurements",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Workshop on Quantum Incompatibility",
+        "workshopUrl": "http://miyaderatakayuki.wixsite.com/home/single-post/2017/01/12/Workshop-on-Quantum-Incompatibility",
+        "place": "Kyoto University",
+        "date":
+        {
+            "from": "2017-1-18",
+            "to": "2017-1-18"
+        },
+        "officialLang": "en",
+        "lang": "en",
+        "style": "oral"
+    },
+    {
+        "title": "The structure of composite systems in quantum theory",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "The 36th Quantum Information Technology Symposium (QIT36)",
+        "workshopUrl": "https://staff.aist.go.jp/s-kawabata/qit/qit36/index_e.html",
+        "place": "Ritesumeikan University, Suzaku Campus",
+        "date":
+        {
+            "from": "2017-5-29",
+            "to": "2017-5-30"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "Review of IBM's Cloud Quantum Computer",
+        "speaker": "Ikko Hamamura",
+        "workshopName": "Quantum Information Kansai Student Chapter 22th",
+        "workshopUrl": "https://sites.google.com/site/qikansai/past/22meeting",
+        "place": "Kyoto Univ.",
+        "date":
+        {
+            "from": "2017-6-6",
+            "to": "2017-6-6"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "Entanglement of Effects",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura",
+        "id": "24pA19-5",
+        "workshopName": "JPS The 2017 Autumn Meeting",
+        "workshopUrl": "http://w4.gakkai-web.net/jps_search/2017aue/data/html/program.html",
+        "place": "Iwate univ.",
+        "date":
+        {
+            "from": "2017-9-21",
+            "to": "2017-9-24"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "The structure of composite systems in quantum theory",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura",
+        "workshopName": "Okinawa School in Physics: Coherent Quantum Dynamics (CQD 2017)",
+        "workshopUrl": "https://groups.oist.jp/ja/cqd/cqd-2017",
+        "place": "OIST Seaside House",
+        "date":
+        {
+            "from": "2017-9-26",
+            "to": "2017-10-5"
+        }
+        ,
+        "officialLang": "en",
+        "lang": "en",
+        "style": "summerSchool"
+    }
+]
