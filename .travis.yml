@@ -5,10 +5,8 @@ cache:
   - node
 node_js:
 - 7.4.0
-script:
--
 before_deploy:
-- npm run build
+- yarn run build
 deploy:
   provider: pages
   skip_cleanup: true

@@ -1,6 +1,6 @@
 {
   "name": "ikkoham2",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
@@ -11,8 +11,8 @@
   "homepage": "https://qinfo.tech",
   "private": true,
   "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "^1.0.16"
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
   }
 }
