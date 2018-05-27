@@ -65,19 +65,19 @@ return (
           <tr><th>Name</th><td>Ikko Hamamura</td></tr>
           <tr><th>E-mail</th><td> hamamura[*atmark*]<wbr />nucleng<wbr />.kyoto-u.ac.jp</td></tr>
           <tr><th>Office</th><td> d1N01, Graduate School of Engineering,<wbr /> Kyoto Univ., C3 Bld., C Cluster Kyoto daigaku-katsura,<wbr /> Nishikyo-ku, Kyoto 615-8540 Japan</td></tr>
-        <tr><th>Phone</th><td> +81-75-383-3910(d1N01)</td></tr>
-      </tbody>
-    </table>
-  </section>
-  <section>
-    <h2>
-      <a href="index_ja.html"><i className="fa fa-language"></i>Japanese</a>
-    </h2>
-  </section>
-  <section>
-    <img src={process.env.PUBLIC_URL + '/img/ikkoham.jpg'} alt="ホームページの中の人の画像" />
-  </section>
-</div>
+          <tr><th>Phone</th><td> +81-75-383-3910(d1N01)</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>
+        <a href="index_ja.html"><i className="fa fa-language"></i>Japanese</a>
+      </h2>
+    </section>
+    <section>
+      <img src={process.env.PUBLIC_URL + '/img/ikkoham.jpg'} alt="ホームページの中の人の画像" />
+    </section>
+  </div>
     );
 }
 }
