@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Publication extends Component {
   render() {
     return (
-        <section id="publication">
+        <section id="publication" className="main">
           <h2>
             <a href="#publication"><i className="fa fa-file-o"></i>Publication</a>
           </h2>
