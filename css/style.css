@@ -56,14 +56,14 @@ h1 {
 }
 
 /* Flexible Box */
-.flex-container {
+ul.flex-container {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-around;
 }
 
-section h2 {
+nav ul li {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -74,11 +74,11 @@ section h2 {
     margin: 10px auto;
 }
 
-section h2:hover {
+nav ul li a:hover {
     border-radius: 10%;
 }
 
-section h2 a {
+nav ul li a {
     color: #f0eee9;/* Colud Dancer *//*#92A8D1;/* Serenity */
     width: 100%;
     height: 100%;
@@ -86,6 +86,23 @@ section h2 a {
     display: table-cell;
     vertical-align: middle;
 }
+
+a.active {
+  pointer-events: none;
+}
+
+nav ul li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  transition: 1s;
+}
+
+nav ul li img:hover {
+  border-radius: 10%;
+}
+
 
 /* CSS animation*/
 @keyframes show{
@@ -102,22 +119,26 @@ section > :not(h2) {
     animation: show 2s ease 0s;
 }
 
-section:target > :not(h2){
+section.main h2 a {
+  color: #f0eee9;/* Colud Dancer *//*#92A8D1;/* Serenity */
+}
+
+section.main > :not(h2){
     display: block;
 }
 
-section:target {
+section.main {
     order: -1;
     width: 100%;
 }
 
-section:target > h2 a {
+section.main > h2 {
     pointer-events: none;
     cursor: default;
     font-size: 20pt;
 }
 
-section:target > h2 {
+section.main > h2 {
     height: auto;
     width: 100%;
     text-align: initial;
@@ -127,7 +148,7 @@ section:target > h2 {
     margin: 10px auto;
 }
 
-section:target h2 i {
+section.main h2 i {
     padding: 5px;
     margin: 5px;
 }
@@ -182,14 +203,3 @@ footer a {
     color: rgb(146, 168, 209);/* Serenity */
 }
 
-section img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  transition: 1s;
-}
-
-section img:hover {
-  border-radius: 10%;
-}
