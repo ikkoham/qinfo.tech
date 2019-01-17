@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 import PresentationDetail from './PresentationDetail';
 
 class Presentation extends Component {
@@ -41,49 +42,55 @@ let split_a = a.date.from.split(/[^0-9]/);
 }
 
 render() {
-if (Object.keys(this.state).length) {
-return (
-  <section id="presentation" className="main">
-    <h2>
-      <a href="/presentation">
-        <i className="fa fa-bar-chart"></i>Presentation
-      </a>
-    </h2>
-    <ul className="fa-ul">
-      <li><i className="fa-li fa fa-university"></i>International (Oral)
+const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
+  const messages = require(`./locale/${locale}.json`);
+  if (Object.keys(this.state).length) {
+  return (
+    <IntlProvider locale={locale} messages={messages}>
+      <section id="presentation" className="main">
+        <h2>
+          <a href="/presentation">
+            <i className="fa fa-bar-chart"></i><FormattedMessage id="presentation"/>
+          </a>
+        </h2>
+        <ul className="fa-ul">
+          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="international.oral"/>
+            <ol reversed="reversed">
+              <PresentationDetail presentations={this.state.presentation.internationalOral}/>
+            </ol>
+          </li>
+          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="domestic.oral"/>
+          <ol reversed="reversed">
+            <PresentationDetail presentations={this.state.presentation.domesticOral}/>
+          </ol>
+        </li>
+        <li><i className="fa-li fa fa-university"></i><FormattedMessage id="domestic.poster"/>
         <ol reversed="reversed">
-          <PresentationDetail presentations={this.state.presentation.internationalOral}/>
+          <PresentationDetail presentations={this.state.presentation.domesticPoster}/>
         </ol>
       </li>
-    <li><i className="fa-li fa fa-university"></i>Domestic (Oral)
-      <ol reversed="reversed">
-        <PresentationDetail presentations={this.state.presentation.domesticOral}/>
-      </ol>
-    </li>
-  <li><i className="fa-li fa fa-university"></i>Domestic (Poster)
-    <ol reversed="reversed">
-      <PresentationDetail presentations={this.state.presentation.domesticPoster}/>
-    </ol>
-  </li>
-  <li><i className="fa-li fa fa-university"></i>Summer School
-    <ol reversed="reversed">
-      <PresentationDetail presentations={this.state.presentation.summerSchool}/>
-    </ol>
-  </li>
-</ul>
-        </section>
-      );
-}
-return (
-  <section id="presentation" className="main">
-    <h2>
-      <a href="/presentation">
-        <i className="fa fa-bar-chart"></i>Presentation
-      </a>
-    </h2>
-    <p>Now loading</p>
+      <li><i className="fa-li fa fa-university"></i><FormattedMessage id="summer.school"/>
+        <ol reversed="reversed">
+          <PresentationDetail presentations={this.state.presentation.summerSchool}/>
+        </ol>
+      </li>
+    </ul>
   </section>
-);
+</IntlProvider>
+      );
+  }
+  return (
+    <IntlProvider locale={locale} messages={messages}>
+      <section id="presentation" className="main">
+        <h2>
+          <a href="/presentation">
+            <i className="fa fa-bar-chart"></i><FormattedMessage id="presentation"/>
+          </a>
+        </h2>
+        <p>Now loading</p>
+      </section>
+    </IntlProvider>
+  );
 }
 }
 
