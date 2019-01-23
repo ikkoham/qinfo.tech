@@ -22,6 +22,12 @@ const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
             <tr><th>2008/04-<wbr />2011/03</th><td><FormattedMessage id="affiliation.high"/></td></tr>
           </tbody>
         </table>
+        <h4><FormattedMessage id="employment"/></h4>
+        <table>
+          <tbody>
+            <tr><th>2018/04-<wbr /><FormattedMessage id="present"/></th><td><FormattedMessage id="jsps"/></td></tr>
+          </tbody>
+        </table>
         <h3><FormattedMessage id="staff"/></h3>
         <ol reversed="reversed">
           <li>
