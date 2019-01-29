@@ -34,11 +34,6 @@ class Head extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="robots" content="noarchive" />
 
-          <link rel="stylesheet" href="/css/font-awesome.min.css" />
-          <link rel="stylesheet" href="/css/style.css" />
-          <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" />
-          <link rel="shortcut icon" href="/img/favicon.ico" />
-
         </Helmet>
       </div>
     );
