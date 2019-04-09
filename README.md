@@ -6,4 +6,4 @@ This is a source code of [Ikko Hamamura's website](https://qinfo.tech).
 
 - React
 - HTML5, CSS3
-- AWS S3
+- GitHub pages
