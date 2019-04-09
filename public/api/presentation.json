@@ -235,5 +235,117 @@
         "officialLang": "en",
         "lang": "en",
         "style": "summerSchool"
+    },
+        {
+        "title": "Separability Criterion for Quantum Effects",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura",
+        "workshopName": "18th Asian Quantum Information Science Conference",
+        "workshopUrl": "http://aqis-conf.org/2018/",
+        "place": "Nagoya Univ.",
+        "date":
+        {
+            "from": "2018-09-08",
+            "to": "2018-09-12"
+        }
+        ,
+        "officialLang": "en",
+        "lang": "en",
+        "style": "poster"
+    },
+        {
+        "title": "Separability Criterion for Quantum Effects",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura",
+        "workshopName": "The YQIS Conference and CoQuS Summer School 2018",
+        "workshopUrl": "https://yqis-coqus18.univie.ac.at/",
+        "place": "University of Vienna",
+        "date":
+        {
+            "from": "2018-09-17",
+            "to": "2018-09-21"
+        }
+        ,
+        "officialLang": "en",
+        "lang": "en",
+        "style": "poster"
+    },
+    {
+        "title": "量子コンピュータソフトウェアの現状と未来",
+        "speaker": "濵村 一航",
+        "workshopName": "第8回 QUATUO 研究会",
+        "workshopUrl": "http://www.sceng.kochi-tech.ac.jp/koban/quatuo/doku.php?id=%E7%AC%AC8%E5%9B%9Equatuo%E7%A0%94%E7%A9%B6%E4%BC%9A",
+        "place": "Kochi University of Technology",
+        "date":
+        {
+            "from": "2018-10-6",
+            "to": "2017-10-7"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "量子ボードゲームEntanglion",
+        "speaker": "濵村　一航",
+        "workshopName": "第25回 量子情報関西 Student Chapter",
+        "workshopUrl": "https://sites.google.com/site/qikansai/past/25meeting",
+        "place": "Osaka Univ.",
+        "date":
+        {
+            "from": "2018-12-6",
+            "to": "2018-12-6"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
+        "title": "CHSH monogamy and Information Causality",
+        "speaker": "Ikko Hamamura",
+        "authors": "Ikko Hamamura, Takayuki Miyadera",
+        "id": "14aK304-1",
+        "workshopName": "74th Annual Meeting, The Physical Society of Japan",
+        "workshopUrl": "https://w4.gakkai-web.net/jps_search/2019spe/data/html/program.html",
+        "place": "Kyushu univ.",
+        "date":
+        {
+            "from": "2019-3-14",
+            "to": "2019-3-17"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "Relation between state-distinction power and disturbance in quantum measurements",
+        "speaker": "Ikko Hamamura",
+        "place": "University of Turku",
+        "date":
+        {
+            "from": "2017-3-13",
+            "to": "2017-3-13"
+        }
+        ,
+        "officialLang": "en",
+        "lang": "en",
+        "style": "seminar"
+    },
+    {
+        "title": "量子論の合成系の構造",
+        "speaker": "濱村　一航",
+        "workshopName": "理論セミナー",
+        "workshopUrl": "https://www.kek.jp/ja/Conference/20171026160751/",
+        "place": "高エネルギー加速器研究機構",
+        "date":
+        {
+            "from": "2017-10-26",
+            "to": "2017-10-26"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "seminar"
     }
 ]

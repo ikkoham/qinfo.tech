@@ -31,6 +31,12 @@ const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
         <h3><FormattedMessage id="staff"/></h3>
         <ol reversed="reversed">
           <li>
+            <a href="https://sites.google.com/site/qikansai/past/24meeting" target="_blank" rel="noreferrer noopener">
+              <FormattedMessage id="qikansai24"/>
+            </a>
+            &nbsp;<FormattedMessage id="organizer"/>
+          </li>
+          <li>
             <a href="https://cmpss.jp/forepast/ss2016/page/" target="_blank" rel="noreferrer noopener">
               <FormattedMessage id="cmpss61"/>
             </a>
