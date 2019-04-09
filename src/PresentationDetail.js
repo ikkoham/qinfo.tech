@@ -14,7 +14,7 @@ class PresentationDetail extends Component {
         "{p.title}" {p.id}<br />
         <a href={p.workshopUrl} target="_blank">
         {p.workshopName}
-      </a><br />
+      </a>{(typeof p.workshopName !== "undefined") && <br />}
         @{p.place}<br />
         {format(p.date.from)} {(p.date.from !== p.date.to) && '- ' + format(p.date.to)}
       </li>

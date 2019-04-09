@@ -9,12 +9,13 @@ import Publication from './Publication';
 import Cv from './Cv';
 import Contact from './Contact';
 import Nav from './Nav';
+import Footer from './Footer';
 
 class App extends React.Component {
 render() {
 return (
   <Router>
-    <div>
+    <div id='container'>
       <Switch>
         <Route path="/:lang" component={Head} />
         <Route component={Head} />
@@ -31,9 +32,11 @@ return (
         <Route path="/:lang/contact" component={Contact} />
       </Switch>
       <Switch>
+        <Route path="/:lang/:link" component={Nav}/>
         <Route path="/:lang" component={Nav}/>
         <Route component={Nav}/>
       </Switch>
+      <Route component={Footer}/>
   </div>
 </Router>
     );
