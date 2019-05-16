@@ -27,6 +27,11 @@ return (
             <i className="fa fa-instagram fa-3x icon-instagram"></i>
           </a>
         </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ikkoham/" target="_blank" rel="noopener noreferrer">
+            <i className="fa fa-linkedin-square fa-3x icon-linkedin"></i>
+          </a>
+        </li>
       </ul>
     </nav>
     <small>

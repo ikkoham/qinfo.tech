@@ -229,3 +229,6 @@ footer nav ul li{
   background-clip: text;
   -webkit-background-clip: text;
 }
+.icon-linkedin {
+  color: #0077B5;
+}
