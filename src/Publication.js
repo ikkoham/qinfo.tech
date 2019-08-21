@@ -23,7 +23,7 @@ render() {
               <li>
                 Relation between state-distinction power and disturbance in quantum measurements<br />
                 I. Hamamura, T. Miyadera<br />
-                arXiv:1610.08814
+                <a href="https://doi.org/10.1063/1.5109446" target="_blank" rel="noopener noreferrer">J. Math. Phys. 60, 082103 (2019)</a>
               </li>
             </ol>
           </li>
