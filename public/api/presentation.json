@@ -82,7 +82,7 @@
         "title": "Incompatibility in Quantum Theory",
         "speaker": "Ikko Hamamura",
         "workshopName": "61th Condensed Matter Physics Summer School 2016",
-        "workshopUrl": "http://cmpss.jp/index.html",
+        "workshopUrl": "http://cmpss.jp/forepast/ss2016/page/index.html",
         "place": "Hotel Charade Inn Shiga",
         "date":
         {
@@ -97,12 +97,42 @@
         "title": "Relation between state-distinction power and disturbance",
         "speaker": "Ikko Hamamura",
         "workshopName": "61th Condensed Matter Physics Summer School 2016",
-        "workshopUrl": "http://cmpss.jp/index.html",
+        "workshopUrl": "https://cmpss.jp/forepast/ss2016/page/index.html",
         "place": "Hotel Charade Inn Shiga",
         "date":
         {
             "from": "2016-7-29",
             "to": "2016-8-2"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "summerSchool"
+    },
+    {
+        "title": "物理量の測定と状態変化における両立不可能性",
+        "speaker": "濵村 一航",
+        "workshopName": "第64回物性若手夏の学校 Condensed Matter Physics Summer School",
+        "workshopUrl": "https://cmpss.jp/main.html",
+        "place": "ぎふ長良川温泉ホテルパーク",
+        "date":
+        {
+            "from": "2019-8-5",
+            "to": "2019-8-9"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "summerSchool"
+    },
+    {
+        "title": "量子ボードゲーム「エンタングリオン」",
+        "speaker": "濵村 一航",
+        "workshopName": "第64回物性若手夏の学校 Condensed Matter Physics Summer School",
+        "workshopUrl": "https://cmpss.jp/main.html",
+        "place": "ぎふ長良川温泉ホテルパーク",
+        "date":
+        {
+            "from": "2019-8-5",
+            "to": "2019-8-9"
         },
         "officialLang": "ja",
         "lang": "ja",
@@ -286,6 +316,21 @@
         "style": "poster"
     },
     {
+        "title": "情報因果律からCHSHモノガミー不等式を導出する",
+        "speaker": "濵村 一航",
+        "workshopName": "第9回 QUATUO 研究会",
+        "workshopUrl": "http://www.sceng.kochi-tech.ac.jp/koban/quatuo/doku.php?id=%E7%AC%AC9%E5%9B%9Equatuo%E7%A0%94%E7%A9%B6%E4%BC%9A",
+        "place": "崇城大学",
+        "date":
+        {
+            "from": "2020-1-11",
+            "to": "2020-1-12"
+        },
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "poster"
+    },
+    {
         "title": "量子ボードゲームEntanglion",
         "speaker": "濵村　一航",
         "workshopName": "第25回 量子情報関西 Student Chapter",
@@ -312,6 +357,24 @@
         {
             "from": "2019-3-14",
             "to": "2019-3-17"
+        }
+        ,
+        "officialLang": "ja",
+        "lang": "ja",
+        "style": "oral"
+    },
+    {
+        "title": "量子コンピュータを用いた非文脈依存性の破れの検証",
+        "speaker": "濵村一航",
+        "authors": "濵村一航",
+        "id": "10pK12-8",
+        "workshopName": "日本物理学会2019年秋季大会",
+        "workshopUrl": "https://w4.gakkai-web.net/jps_search/2019au/data/html/program01.html",
+        "place": "岐阜大学",
+        "date":
+        {
+            "from": "2019-9-10",
+            "to": "2019-9-13"
         }
         ,
         "officialLang": "ja",
