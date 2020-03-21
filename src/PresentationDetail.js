@@ -12,7 +12,7 @@ class PresentationDetail extends Component {
         <li key={k}>
         {p.speaker}<br />
         "{p.title}" {p.id}<br />
-        <a href={p.workshopUrl} target="_blank">
+        <a href={p.workshopUrl} target="_blank" rel="noopener noreferrer">
         {p.workshopName}
       </a>{(typeof p.workshopName !== "undefined") && <br />}
         @{p.place}<br />

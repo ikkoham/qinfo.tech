@@ -10,7 +10,7 @@ render() {
   return (
     <IntlProvider locale={locale} messages={messages}>
       <header>
-        <a href="" id="header_link">
+        <a href="/" id="header_link">
           <h1><FormattedMessage id="ikko.hamamura" /></h1>
           <p><FormattedMessage id="student"/>, <FormattedMessage id="affiliation" /></p>
         </a>
