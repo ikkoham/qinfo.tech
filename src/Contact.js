@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 
 class Contact extends React.Component {
 render() {
@@ -25,7 +25,7 @@ const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
             </tr>
             <tr>
               <th><FormattedMessage id="office"/></th>
-              <td><FormattedHTMLMessage id="address"/></td>
+              <td><FormattedMessage id="address"/></td>
             </tr>
             <tr>
               <th><FormattedMessage id="phone"/></th>
