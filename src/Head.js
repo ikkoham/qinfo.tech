@@ -1,14 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { IntlProvider } from 'react-intl';
+import { createIntl } from 'react-intl';
 
 
 class Head extends React.Component {
   render() {
     const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
     const messages = require(`./locale/${locale}.json`);
-    const intlProvider = new IntlProvider({ locale, messages }, {});
-    const { intl } = intlProvider.getChildContext();
+    const intl = createIntl({
+      locale: locale,
+      defaultLocale: 'en',
+      messages: messages
+    });
     return(
       <div className="head">
         <Helmet>

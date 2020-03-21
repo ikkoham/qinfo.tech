@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {addLocaleData} from 'react-intl';
-import ja from "react-intl/locale-data/ja";
-import en from "react-intl/locale-data/en";
 
-
-addLocaleData([...ja, ...en]);
+if (!Intl.PluralRules) {
+  require('@formatjs/intl-pluralrules/polyfill');
+  require('@formatjs/intl-pluralrules/dist/locale-data/en');
+  require('@formatjs/intl-pluralrules/dist/locale-data/ja');
+}
 
 ReactDOM.render(
   <App />,
