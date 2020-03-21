@@ -59,6 +59,10 @@ const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
         <ul className="fa-ul">
           <li><FormattedMessage id="ap"/></li>
         </ul>
+        <h3><FormattedMessage id="award"/></h3>
+        <ul className="fa-ul">
+          <li><FormattedMessage id="goodspeaker"/></li>
+        </ul>
       </section>
 
     </IntlProvider>
