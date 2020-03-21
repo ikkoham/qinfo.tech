@@ -5,7 +5,13 @@ import { createIntl } from 'react-intl';
 
 class Head extends React.Component {
   render() {
-    const intl = createIntl();
+    const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
+    const messages = require(`./locale/${locale}.json`);
+    const intl = createIntl({
+      locale: locale,
+      defaultLocale: 'en',
+      messages: messages
+    });
     return(
       <div className="head">
         <Helmet>
