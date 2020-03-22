@@ -4,7 +4,7 @@ cache:
   directories:
   - node
 node_js:
-- 7.4.0
+- 13.11.0
 before_deploy:
 - yarn run build
 deploy:

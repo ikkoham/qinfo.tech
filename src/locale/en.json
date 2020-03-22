@@ -39,5 +39,7 @@
   "office": "Office",
   "address": "d1N01, Graduate School of Engineering,<wbr /> Kyoto Univ., C3 Bld., C Cluster Kyoto daigaku-katsura,<wbr /> Nishikyo-ku, Kyoto 615-8540 Japan",
   "phone": "Phone",
-  "phone.number": "+81-75-383-3910(d1N01)"
+  "phone.number": "+81-75-383-3910(d1N01)",
+  "award": "Award",
+  "goodspeaker": "Condensed Matter Physics Summer School 64th Good Speaker Award"
 }
