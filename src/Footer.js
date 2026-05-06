@@ -33,7 +33,7 @@ const Footer = () => (
     </nav>
     <small>
       <i className="fa fa-copyright" />
-      2015-2019 Ikko Hamamura.
+      2015-2026 Ikko Hamamura.
     </small>
   </footer>
 );
