@@ -24,7 +24,7 @@ module.exports = {
     "react/prop-types": 0,
     "no-underscore-dangle": 0,
     "camelcase": 0,
-    "react/no-array-index-key": 1,
+    "react/no-array-index-key": 0,
     "jsx-a11y/control-has-associated-label": 0,
     "react/no-unescaped-entities": 0
   }
