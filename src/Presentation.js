@@ -1,113 +1,119 @@
-import React, { Component } from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import React, { useState, useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 import PresentationDetail from './PresentationDetail';
 
-class Presentation extends Component {
-constructor(props) {
-super(props);
-  this.state = {};
-  fetch(process.env.PUBLIC_URL + '/api/presentation.json')
-    .then(res => res.json())
-    .then(res => this.setState({
-    presentation : {
-    domesticOral : res
-      .filter(p => p.style === 'oral' && p.officialLang === 'ja')
-      .sort(this.sortedByDateDesc),
-      domesticPoster : res
-      .filter(p => p.style === 'poster' && p.officialLang === 'ja')
-      .sort(this.sortedByDateDesc),
-      summerSchool : res
-      .filter(p => p.style === 'summerSchool')
-      .sort(this.sortedByDateDesc),
-      internationalOral : res
-      .filter(p => p.style === 'oral' && p.officialLang === 'en')
-      .sort(this.sortedByDateDesc),
-      internationalPoster : res
-      .filter(p => p.style === 'poster' && p.officialLang === 'en')
-      .sort(this.sortedByDateDesc),
-      seminar : res
-      .filter(p => p.style === 'seminar')
-      .sort(this.sortedByDateDesc)
-    }
-    })
-    );
-}
+const Presentation = () => {
+  const [presentation, setPresentation] = useState(null);
 
-sortedByDateDesc(a, b) {
-  let split_a = a.date.from.split(/[^0-9]/);
-  let split_b = b.date.from.split(/[^0-9]/);
-  let parsedDateA = new Date(split_a[0], split_a[1] - 1, split_b[2]);
-  let parsedDateB = new Date(split_b[0], split_b[1] - 1, split_b[2]);
-  if (parsedDateA < parsedDateB) {
-  return 1;
-  }
-  if (parsedDateA > parsedDateB) {
-  return -1;
-  }
-  return 1;
-}
+  useEffect(() => {
+    const sortedByDateDesc = (a, b) => {
+      const split_a = a.date.from.split(/[^0-9]/);
+      const split_b = b.date.from.split(/[^0-9]/);
+      const parsedDateA = new Date(split_a[0], split_a[1] - 1, split_a[2]);
+      const parsedDateB = new Date(split_b[0], split_b[1] - 1, split_b[2]);
+      if (parsedDateA < parsedDateB) {
+        return 1;
+      }
+      if (parsedDateA > parsedDateB) {
+        return -1;
+      }
+      return 1;
+    };
 
-render() {
-const locale = this.props.match.params.lang === 'ja' ? 'ja' : 'en';
-  const messages = require(`./locale/${locale}.json`);
-  if (Object.keys(this.state).length) {
-  return (
-    <IntlProvider locale={locale} messages={messages}>
+    fetch(`${process.env.PUBLIC_URL}/api/presentation.json`)
+      .then((res) => res.json())
+      .then((res) => {
+        setPresentation({
+          domesticOral: res
+            .filter((p) => p.style === 'oral' && p.officialLang === 'ja')
+            .sort(sortedByDateDesc),
+          domesticPoster: res
+            .filter((p) => p.style === 'poster' && p.officialLang === 'ja')
+            .sort(sortedByDateDesc),
+          summerSchool: res
+            .filter((p) => p.style === 'summerSchool')
+            .sort(sortedByDateDesc),
+          internationalOral: res
+            .filter((p) => p.style === 'oral' && p.officialLang === 'en')
+            .sort(sortedByDateDesc),
+          internationalPoster: res
+            .filter((p) => p.style === 'poster' && p.officialLang === 'en')
+            .sort(sortedByDateDesc),
+          seminar: res
+            .filter((p) => p.style === 'seminar')
+            .sort(sortedByDateDesc),
+        });
+      });
+  }, []);
+
+  if (presentation) {
+    return (
       <section id="presentation" className="main">
         <h2>
           <a href="/presentation">
-            <i className="fa fa-bar-chart"></i><FormattedMessage id="presentation"/>
+            <i className="fa fa-bar-chart" />
+            <FormattedMessage id="presentation" />
           </a>
         </h2>
         <ul className="fa-ul">
-          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="international.oral"/>
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="international.oral" />
             <ol reversed="reversed">
-              <PresentationDetail presentations={this.state.presentation.internationalOral}/>
+              <PresentationDetail presentations={presentation.internationalOral} />
             </ol>
           </li>
-          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="international.poster"/>
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="international.poster" />
             <ol reversed="reversed">
-              <PresentationDetail presentations={this.state.presentation.internationalPoster}/>
+              <PresentationDetail presentations={presentation.internationalPoster} />
             </ol>
           </li>
-          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="domestic.oral"/>
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="domestic.oral" />
             <ol reversed="reversed">
-              <PresentationDetail presentations={this.state.presentation.domesticOral}/>
+              <PresentationDetail presentations={presentation.domesticOral} />
             </ol>
           </li>
-          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="domestic.poster"/>
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="domestic.poster" />
             <ol reversed="reversed">
-              <PresentationDetail presentations={this.state.presentation.domesticPoster}/>
+              <PresentationDetail presentations={presentation.domesticPoster} />
             </ol>
           </li>
-          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="summer.school"/>
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="summer.school" />
             <ol reversed="reversed">
-              <PresentationDetail presentations={this.state.presentation.summerSchool}/>
+              <PresentationDetail presentations={presentation.summerSchool} />
             </ol>
           </li>
-          <li><i className="fa-li fa fa-university"></i><FormattedMessage id="seminar"/>
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="seminar" />
             <ol reversed="reversed">
-              <PresentationDetail presentations={this.state.presentation.seminar}/>
+              <PresentationDetail presentations={presentation.seminar} />
             </ol>
           </li>
         </ul>
       </section>
-    </IntlProvider>
-  );
+    );
   }
+
   return (
-    <IntlProvider locale={locale} messages={messages}>
-      <section id="presentation" className="main">
-        <h2>
-          <a href="/presentation">
-            <i className="fa fa-bar-chart"></i><FormattedMessage id="presentation"/>
-          </a>
-        </h2>
-        <p>Now loading</p>
-      </section>
-    </IntlProvider>
+    <section id="presentation" className="main">
+      <h2>
+        <a href="/presentation">
+          <i className="fa fa-bar-chart" />
+          <FormattedMessage id="presentation" />
+        </a>
+      </h2>
+      <p>Now loading</p>
+    </section>
   );
-}
-}
+};
 
 export default Presentation;

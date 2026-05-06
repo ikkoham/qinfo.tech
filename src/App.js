@@ -1,5 +1,8 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch} from "react-router-dom";
+import {
+  HashRouter as Router, Route, Routes, useParams,
+} from 'react-router-dom';
+import { IntlProvider } from 'react-intl';
 
 import Head from './Head';
 import Header from './Header';
@@ -11,36 +14,41 @@ import Contact from './Contact';
 import Nav from './Nav';
 import Footer from './Footer';
 
-class App extends React.Component {
-render() {
-return (
+const AppContent = () => {
+  const { lang } = useParams();
+  const locale = lang === 'ja' ? 'ja' : 'en';
+  const messages = require(`./locale/${locale}.json`);
+
+  return (
+    <IntlProvider locale={locale} messages={messages}>
+      <div id="container">
+        <Head />
+        <Header />
+        <Routes>
+          <Route path="research_interest" element={<ResearchInterest />} />
+          <Route path="publication" element={<Publication />} />
+          <Route path="presentation" element={<Presentation />} />
+          <Route path="cv" element={<Cv />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={null} />
+        </Routes>
+        <Routes>
+          <Route path=":link" element={<Nav />} />
+          <Route path="*" element={<Nav />} />
+        </Routes>
+        <Footer />
+      </div>
+    </IntlProvider>
+  );
+};
+
+const App = () => (
   <Router>
-    <div id='container'>
-      <Switch>
-        <Route path="/:lang" component={Head} />
-        <Route component={Head} />
-      </Switch>
-      <Switch>
-        <Route path="/:lang" component={Header} />
-        <Route component={Header} />
-      </Switch>
-      <Switch>
-        <Route path="/:lang/research_interest" component={ResearchInterest} />
-        <Route path="/:lang/publication" component={Publication} />
-        <Route path="/:lang/presentation" component={Presentation} />
-        <Route path="/:lang/cv" component={Cv} />
-        <Route path="/:lang/contact" component={Contact} />
-      </Switch>
-      <Switch>
-        <Route path="/:lang/:link" component={Nav}/>
-        <Route path="/:lang" component={Nav}/>
-        <Route component={Nav}/>
-      </Switch>
-      <Route component={Footer}/>
-  </div>
-</Router>
-    );
-}
-}
+    <Routes>
+      <Route path="/:lang/*" element={<AppContent />} />
+      <Route path="*" element={<AppContent />} />
+    </Routes>
+  </Router>
+);
 
 export default App;

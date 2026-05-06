@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 
 if (!Intl.PluralRules) {
@@ -8,7 +8,8 @@ if (!Intl.PluralRules) {
   require('@formatjs/intl-pluralrules/dist/locale-data/ja');
 }
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <App />,
-  document.getElementById('root')
 );
