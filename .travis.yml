@@ -1,14 +1,13 @@
 language: node_js
-sudo: true
-cache:
-  directories:
-  - node
 node_js:
-- 13.11.0
-before_deploy:
-- yarn run build
+- 20
+cache:
+  yarn: true
+script:
+- yarn build
 deploy:
   provider: pages
+  edge: true
   skip_cleanup: true
   local_dir: build
   keep-history: true
