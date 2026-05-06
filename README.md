@@ -1,4 +1,4 @@
-# Qinfo.Tech [![Build Status](https://travis-ci.org/ikkoham/qinfo.tech.svg?branch=master)](https://travis-ci.org/ikkoham/qinfo.tech)
+# Qinfo.Tech [![Deploy to GitHub Pages](https://github.com/ikkoham/qinfo.tech/actions/workflows/deploy.yml/badge.svg)](https://github.com/ikkoham/qinfo.tech/actions)
 
 This is a source code of [Ikko Hamamura's website](https://qinfo.tech).
 

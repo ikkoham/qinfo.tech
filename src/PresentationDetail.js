@@ -7,8 +7,8 @@ const PresentationDetail = ({ presentations }) => {
     return new Intl.DateTimeFormat('en-US', options).format(new Date(dp[0], dp[1] - 1, dp[2]));
   };
 
-  return presentations.map((p, k) => (
-    <li key={k}>
+  return presentations.map((p) => (
+    <li key={p.id || `${p.title}-${p.date.from}`}>
       {p.speaker}
       <br />
       "
