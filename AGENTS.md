@@ -16,6 +16,9 @@ This workflow ensures that every change is properly isolated, reviewed, and veri
 # Content Standards
 
 ## Publications
-- **Author Listing**:
+- **Data Storage**:
+  - The data file (`src/data/publications.ts`) MUST contain the **full list of authors** as an array of strings.
+- **UI Display**:
   - For publications with **6 or fewer authors**, list ALL authors.
   - For publications with **more than 6 authors**, list only the **first 3 authors** followed by "et al.".
+  - This logic is implemented dynamically in the component.
