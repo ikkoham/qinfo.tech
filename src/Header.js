@@ -6,7 +6,7 @@ const Header = () => (
     <a href="/" id="header_link">
       <h1><FormattedMessage id="ikko.hamamura" /></h1>
       <p>
-        <FormattedMessage id="student" />
+        <FormattedMessage id="job.title" />
         ,
         {' '}
         <FormattedMessage id="affiliation" />
