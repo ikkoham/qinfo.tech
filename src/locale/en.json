@@ -1,6 +1,7 @@
 {
   "ikko.hamamura": "Ikko Hamamura",
-  "affiliation": "NVIDIA",
+  "header.affiliation": "NVIDIA",
+  "affiliation": "Quantum Physics Group, Graduate School of Engineering, Kyoto University",
   "job.title": "Quantum Algorithm Engineer",
   "research.interest": "Research Interest",
   "quantum.information": "Quantum information",
