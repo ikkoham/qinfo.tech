@@ -9,7 +9,7 @@ const Header = () => (
         <FormattedMessage id="job.title" />
         ,
         {' '}
-        <FormattedMessage id="affiliation" />
+        <FormattedMessage id="header.affiliation" />
       </p>
     </a>
   </header>
