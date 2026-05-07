@@ -12,3 +12,10 @@ For all future codebase modifications, the following workflow MUST be strictly f
    - Confirm behavioral correctness using the served build before considering the task complete.
 
 This workflow ensures that every change is properly isolated, reviewed, and verified against the actual build artifacts produced by the CI environment.
+
+# Content Standards
+
+## Publications
+- **Author Listing**:
+  - For publications with **6 or fewer authors**, list ALL authors.
+  - For publications with **more than 6 authors**, list only the **first 3 authors** followed by "et al.".
