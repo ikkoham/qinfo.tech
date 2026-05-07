@@ -17,7 +17,7 @@ const Cv = () => (
           <th>
             2015/04-
             <wbr />
-            <FormattedMessage id="present" />
+            2020/03
           </th>
           <td><FormattedMessage id="affiliation" /></td>
         </tr>
@@ -44,9 +44,25 @@ const Cv = () => (
       <tbody>
         <tr>
           <th>
-            2018/04-
+            2024/04-
             <wbr />
             <FormattedMessage id="present" />
+          </th>
+          <td><FormattedMessage id="nvidia" /></td>
+        </tr>
+        <tr>
+          <th>
+            2020/04-
+            <wbr />
+            2024/03
+          </th>
+          <td><FormattedMessage id="ibm" /></td>
+        </tr>
+        <tr>
+          <th>
+            2018/04-
+            <wbr />
+            2020/03
           </th>
           <td><FormattedMessage id="jsps" /></td>
         </tr>
@@ -54,6 +70,11 @@ const Cv = () => (
     </table>
     <h3><FormattedMessage id="staff" /></h3>
     <ol reversed="reversed">
+      <li>
+        <a href="https://www.ipsj.or.jp/sig/qs/" target="_blank" rel="noreferrer noopener">
+          <FormattedMessage id="ipsjqs" />
+        </a>
+      </li>
       <li>
         <a href="https://sites.google.com/site/qikansai/past/24meeting" target="_blank" rel="noreferrer noopener">
           <FormattedMessage id="qikansai24" />
