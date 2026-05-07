@@ -19,7 +19,7 @@ const Cv = () => (
             <wbr />
             2020/03
           </th>
-          <td><FormattedMessage id="affiliation" /></td>
+          <td><FormattedMessage id="affiliation.phd" /></td>
         </tr>
         <tr>
           <th>
@@ -71,7 +71,7 @@ const Cv = () => (
     <h3><FormattedMessage id="staff" /></h3>
     <ol reversed="reversed">
       <li>
-        <a href="https://www.ipsj.or.jp/sig/qs/" target="_blank" rel="noreferrer noopener">
+        <a href="https://sigqs.ipsj.or.jp/committee.html" target="_blank" rel="noreferrer noopener">
           <FormattedMessage id="ipsjqs" />
         </a>
       </li>
