@@ -6,7 +6,7 @@ export interface Publication {
   id: string;
   type: BibTeXType;
   title: string;
-  author: string;
+  authors: string[];
   journal?: string;
   booktitle?: string;
   volume?: string;

@@ -4,12 +4,19 @@ import { publications } from './data/publications';
 import { Publication as PublicationType } from './types/publication';
 
 const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
+  const formatAuthors = (authors: string[]) => {
+    if (authors.length <= 6) {
+      return authors.join(', ');
+    }
+    return `${authors.slice(0, 3).join(', ')}, et al.`;
+  };
+
   if (pub.category === 'originalPapers') {
     return (
       <li>
         {pub.title.startsWith('“') ? pub.title : `“${pub.title}”`}
         <br />
-        {pub.author}
+        {formatAuthors(pub.authors)}
         <br />
         <a href={pub.url} target="_blank" rel="noopener noreferrer">
           {pub.journal}
@@ -26,7 +33,7 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
   if (pub.category === 'thesis') {
     return (
       <li>
-        {pub.author}
+        {formatAuthors(pub.authors)}
         , “
         {pub.title}
         ”,
@@ -56,7 +63,7 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
   // category === 'kiyo'
   return (
     <li>
-      {pub.author}
+      {formatAuthors(pub.authors)}
       「
       {pub.title}
       」,
