@@ -2,8 +2,8 @@ export type PresentationStyle = 'oral' | 'poster' | 'summerSchool' | 'seminar';
 
 export interface Presentation {
   title: string;
-  speaker: string;
-  authors?: string;
+  presenter: string;
+  authors: string[];
   id?: string;
   workshopName?: string;
   workshopUrl?: string;
