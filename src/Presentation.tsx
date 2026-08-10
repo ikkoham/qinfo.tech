@@ -32,6 +32,12 @@ const Presentation = () => {
     seminar: presentations
       .filter((p) => p.style === 'seminar')
       .sort(sortedByDateDesc),
+    invitedTalks: presentations
+      .filter((p) => p.style === 'invited')
+      .sort(sortedByDateDesc),
+    handsOn: presentations
+      .filter((p) => p.style === 'handsOn')
+      .sort(sortedByDateDesc),
   };
 
   return (
@@ -43,6 +49,15 @@ const Presentation = () => {
         </a>
       </h2>
       <ul className="fa-ul">
+        {categorizedPresentations.invitedTalks.length > 0 && (
+          <li>
+            <i className="fa-li fa fa-university" />
+            <FormattedMessage id="invited.talks" />
+            <ol reversed>
+              <PresentationDetail presentations={categorizedPresentations.invitedTalks} />
+            </ol>
+          </li>
+        )}
         <li>
           <i className="fa-li fa fa-university" />
           <FormattedMessage id="international.oral" />
@@ -71,6 +86,15 @@ const Presentation = () => {
             <PresentationDetail presentations={categorizedPresentations.domesticPoster} />
           </ol>
         </li>
+        {categorizedPresentations.handsOn.length > 0 && (
+          <li>
+            <i className="fa-li fa fa-laptop" />
+            <FormattedMessage id="hands.on" />
+            <ol reversed>
+              <PresentationDetail presentations={categorizedPresentations.handsOn} />
+            </ol>
+          </li>
+        )}
         <li>
           <i className="fa-li fa fa-university" />
           <FormattedMessage id="summer.school" />
