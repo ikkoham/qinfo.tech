@@ -19,7 +19,7 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
         {formatAuthors(pub.authors)}
         <br />
         <a href={pub.url} target="_blank" rel="noopener noreferrer">
-          {pub.journal}
+          {pub.journal || pub.booktitle}
           {' '}
           {pub.volume}
           {pub.number && ` (${pub.number})`}
@@ -30,7 +30,23 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
     );
   }
 
-  if (pub.category === 'thesis') {
+  if (pub.category === 'books') {
+    return (
+      <li>
+        {formatAuthors(pub.authors)}
+        「
+        <a href={pub.url} target="_blank" rel="noopener noreferrer">
+          {pub.title}
+        </a>
+        」,
+        {' '}
+        {pub.publisher}
+        {` (${pub.year}).`}
+      </li>
+    );
+  }
+
+  if (pub.category === 'patents') {
     return (
       <li>
         {formatAuthors(pub.authors)}
@@ -38,22 +54,40 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
         {pub.title}
         ”,
         {' '}
+        <a href={pub.url} target="_blank" rel="noopener noreferrer">
+          {pub.journal}
+        </a>
+        {` (${pub.year}).`}
+      </li>
+    );
+  }
+
+  if (pub.category === 'thesis') {
+    return (
+      <li>
+        {formatAuthors(pub.authors)}
+        , “
+        {pub.url ? (
+          <a href={pub.url} target="_blank" rel="noopener noreferrer">
+            {pub.title}
+          </a>
+        ) : (
+          pub.title
+        )}
+        ”,
+        {' '}
         {pub.journal}
-        ,
-        {' '}
-        {pub.publisher}
-        ,
-        {' '}
-        {pub.volume && `Vol. ${pub.volume} `}
-        {pub.number && `No. ${pub.number}, `}
-        {pub.pages && `${pub.pages}, `}
-        {`(${pub.year}).`}
+        {pub.publisher && `, ${pub.publisher}`}
+        {pub.volume && `, Vol. ${pub.volume}`}
+        {pub.number && `, No. ${pub.number}`}
+        {pub.pages && `, ${pub.pages}`}
+        {` (${pub.year}).`}
         {pub.doi && (
           <>
             {' '}
             doi:
             {' '}
-            <a href={pub.url} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
+            <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
           </>
         )}
       </li>
@@ -65,7 +99,13 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
     <li>
       {formatAuthors(pub.authors)}
       「
-      {pub.title}
+      {pub.url ? (
+        <a href={pub.url} target="_blank" rel="noopener noreferrer">
+          {pub.title}
+        </a>
+      ) : (
+        pub.title
+      )}
       」,
       {' '}
       {pub.journal}
@@ -74,7 +114,8 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
       {pub.publisher}
       ,
       {' '}
-      {pub.volume}
+      {pub.volume && `Vol. ${pub.volume}`}
+      {pub.number && ` No. ${pub.number}`}
       {' '}
       {pub.pages && `p.${pub.pages} `}
       {`(${pub.year}).`}
@@ -85,6 +126,12 @@ const PublicationItem: React.FC<{ pub: PublicationType }> = ({ pub }) => {
 const Publication = () => {
   const originalPapers = publications
     .filter((p) => p.category === 'originalPapers')
+    .sort((a, b) => b.year - a.year);
+  const books = publications
+    .filter((p) => p.category === 'books')
+    .sort((a, b) => b.year - a.year);
+  const patents = publications
+    .filter((p) => p.category === 'patents')
     .sort((a, b) => b.year - a.year);
   const thesis = publications
     .filter((p) => p.category === 'thesis')
@@ -111,8 +158,30 @@ const Publication = () => {
             ))}
           </ol>
         </li>
+        {books.length > 0 && (
+          <li>
+            <i className="fa-li fa fa-book" />
+            <FormattedMessage id="books" />
+            <ol reversed>
+              {books.map((pub) => (
+                <PublicationItem key={pub.id} pub={pub} />
+              ))}
+            </ol>
+          </li>
+        )}
+        {patents.length > 0 && (
+          <li>
+            <i className="fa-li fa fa-certificate" />
+            <FormattedMessage id="patents" />
+            <ol reversed>
+              {patents.map((pub) => (
+                <PublicationItem key={pub.id} pub={pub} />
+              ))}
+            </ol>
+          </li>
+        )}
         <li>
-          <i className="fa-li fa fa-book" />
+          <i className="fa-li fa fa-graduation-cap" />
           <FormattedMessage id="thesis" />
           <ol reversed>
             {thesis.map((pub) => (
@@ -121,7 +190,7 @@ const Publication = () => {
           </ol>
         </li>
         <li>
-          <i className="fa-li fa fa-book" />
+          <i className="fa-li fa fa-bookmark" />
           <FormattedMessage id="kiyo" />
           <ol reversed>
             {kiyo.map((pub) => (
