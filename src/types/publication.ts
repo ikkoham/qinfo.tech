@@ -1,6 +1,6 @@
-export type BibTeXType = 'article' | 'book' | 'inproceedings' | 'misc' | 'phdthesis' | 'mastersthesis';
+export type BibTeXType = 'article' | 'book' | 'inproceedings' | 'misc' | 'phdthesis' | 'mastersthesis' | 'patent';
 
-export type PublicationCategory = 'originalPapers' | 'thesis' | 'kiyo';
+export type PublicationCategory = 'originalPapers' | 'thesis' | 'kiyo' | 'books' | 'patents';
 
 export interface Publication {
   id: string;
