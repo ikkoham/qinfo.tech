@@ -1,4 +1,4 @@
-export type PresentationStyle = 'oral' | 'poster' | 'summerSchool' | 'seminar';
+export type PresentationStyle = 'oral' | 'poster' | 'summerSchool' | 'seminar' | 'invited' | 'handsOn';
 
 export interface Presentation {
   title: string;
@@ -15,4 +15,5 @@ export interface Presentation {
   officialLang: 'ja' | 'en';
   lang: 'ja' | 'en';
   style: PresentationStyle;
+  presenterRole?: string;
 }

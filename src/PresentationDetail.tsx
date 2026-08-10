@@ -16,20 +16,19 @@ const PresentationDetail: React.FC<PresentationDetailProps> = ({ presentations }
     return meNames.includes(name.trim());
   };
 
-  const renderAuthors = (p: Presentation) => {
-    return p.authors.map((author, index) => {
-      const isPresenter = author.trim() === p.presenter.trim();
-      const isHamamura = isMe(author);
+  const renderAuthors = (p: Presentation) => p.authors.map((author, index) => {
+    const isPresenter = author.trim() === p.presenter.trim();
+    const isHamamura = isMe(author);
+    const roleLabel = isPresenter ? ` (${p.presenterRole || 'Speaker'})` : '';
 
-      return (
-        <span key={author}>
-          {isHamamura ? <u><strong>{author}</strong></u> : author}
-          {isPresenter && ' (Speaker)'}
-          {index < p.authors.length - 1 ? ', ' : ''}
-        </span>
-      );
-    });
-  };
+    return (
+      <span key={author}>
+        {isHamamura ? <u><strong>{author}</strong></u> : author}
+        {roleLabel}
+        {index < p.authors.length - 1 ? ', ' : ''}
+      </span>
+    );
+  });
 
   return (
     <>
@@ -43,7 +42,6 @@ const PresentationDetail: React.FC<PresentationDetailProps> = ({ presentations }
           {' '}
           {p.id}
           <br />
-...
 
           <a href={p.workshopUrl} target="_blank" rel="noopener noreferrer">
             {p.workshopName}
