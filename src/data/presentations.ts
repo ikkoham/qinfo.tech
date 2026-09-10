@@ -709,4 +709,20 @@ export const presentations: Presentation[] = [
     lang: 'ja',
     style: 'invited',
   },
+  {
+    title: 'CUDA-Qが拓く量子古典ハイブリッド計算の未来',
+    presenter: '濵村一航',
+    presenterRole: 'Invited Speaker',
+    authors: ['濵村一航'],
+    workshopName: '第5回 スーパーコンピュータ「不老」 ユーザ会',
+    workshopUrl: 'https://icts.nagoya-u.ac.jp/ja/sc/news/event/2024-10-02-user2.html',
+    place: '名古屋大学 情報基盤センター / オンライン',
+    date: {
+      from: '2024-10-02',
+      to: '2024-10-02',
+    },
+    officialLang: 'ja',
+    lang: 'ja',
+    style: 'invited',
+  },
 ];
